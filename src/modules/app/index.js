@@ -6,6 +6,16 @@ import {
   StyledDivHeader,
   StyledTextArea,
   StyledButtonTweet,
+  StyledFooter,
+  StyledBsImage,
+  StyledAiOutLineFileGif,
+  StyledBsJustifyLeft,
+  StyledDivMedia,
+  StyledBsGeoAlt,
+  StyledDivMessageAdd,
+  StyledBsPlusCircleFill,
+  StyledSpanWordCount,
+  StyledVerticleDivider,
 } from "./styles";
 
 const App = () => {
@@ -15,7 +25,22 @@ const App = () => {
         <StyledXIcon />
         <StyledButtonTweet>Tweet</StyledButtonTweet>
       </StyledDivHeader>
-      <StyledTextArea placeholder="Remember, be nice!"></StyledTextArea>
+      <StyledTextArea placeholder="Type something here please !!"></StyledTextArea>
+      <StyledFooter>
+        <StyledDivMedia>
+          <StyledBsImage />
+          <StyledAiOutLineFileGif />
+          <StyledBsJustifyLeft />
+          <StyledBsGeoAlt />
+        </StyledDivMedia>
+        <StyledDivMessageAdd>
+          <StyledSpanWordCount title="remaining characters">
+            -150
+          </StyledSpanWordCount>{" "}
+          <StyledVerticleDivider />
+          <StyledBsPlusCircleFill />
+        </StyledDivMessageAdd>
+      </StyledFooter>
     </StyledDivApp>
   );
 };
