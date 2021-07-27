@@ -25,7 +25,7 @@ const App = () => {
         <StyledXIcon />
         <StyledButtonTweet>Tweet</StyledButtonTweet>
       </StyledDivHeader>
-      <StyledTextArea placeholder="Type something here please !!"></StyledTextArea>
+      <StyledTextArea data-testid="textarea" placeholder="Type something here please !!"></StyledTextArea>
       <StyledFooter>
         <StyledDivMedia>
           <StyledBsImage />
@@ -34,8 +34,8 @@ const App = () => {
           <StyledBsGeoAlt />
         </StyledDivMedia>
         <StyledDivMessageAdd>
-          <StyledSpanWordCount title="remaining characters">
-            -150
+          <StyledSpanWordCount data-testid="charCounter" title="remaining characters">
+            -11
           </StyledSpanWordCount>{" "}
           <StyledVerticleDivider />
           <StyledBsPlusCircleFill />
