@@ -120,7 +120,7 @@ export const StyledSpanWordCount = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3px;
+  padding: 3px 5px;
   height: 1em;
 `;
 export const StyledVerticleDivider = styled.div`

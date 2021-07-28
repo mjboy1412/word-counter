@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useDebounce, useWordCounterColor } from "./hooks";
+import { CHARACTERS_LIMITATION } from "./contants";
 import {
   StyledXIcon,
   StyledDivApp,
@@ -19,13 +21,26 @@ import {
 } from "./styles";
 
 const App = () => {
+  const [message, handleInputDebounceChange] = useDebounce("");
+  const wordCounterColor = useWordCounterColor(message);
+
+  const handleChange = (event) => {
+    event.preventDefault();
+    const { value } = event.target;
+    handleInputDebounceChange(value);
+  };
+
   return (
     <StyledDivApp>
       <StyledDivHeader>
         <StyledXIcon />
         <StyledButtonTweet>Tweet</StyledButtonTweet>
       </StyledDivHeader>
-      <StyledTextArea data-testid="textarea" placeholder="Type something here please !!"></StyledTextArea>
+      <StyledTextArea
+        data-testid="textarea"
+        placeholder="Type something here please !!"
+        onChange={handleChange}
+      ></StyledTextArea>
       <StyledFooter>
         <StyledDivMedia>
           <StyledBsImage />
@@ -34,8 +49,12 @@ const App = () => {
           <StyledBsGeoAlt />
         </StyledDivMedia>
         <StyledDivMessageAdd>
-          <StyledSpanWordCount data-testid="charCounter" title="remaining characters">
-            -11
+          <StyledSpanWordCount
+            data-testid="charCounter"
+            title="remaining characters"
+            color={wordCounterColor}
+          >
+            {CHARACTERS_LIMITATION - message.length}
           </StyledSpanWordCount>{" "}
           <StyledVerticleDivider />
           <StyledBsPlusCircleFill />
