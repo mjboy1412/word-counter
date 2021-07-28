@@ -57,7 +57,7 @@ it("test word-counter when it is between 40 and 50", () => {
   );
 });
 
-it("test word-counter when it is below 40", () => {
+it("test word-counter when it is beyong 50", () => {
   const { getByTestId } = render(<App />);
   fireEvent.change(getByTestId(/textarea/g), {
     target: { value: STRING_BEYONG_50_CHAR },

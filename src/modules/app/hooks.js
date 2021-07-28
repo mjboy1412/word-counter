@@ -3,7 +3,7 @@ import { WORD_COUNTER_COLOR, CHARACTERS_LIMITATION } from "./contants";
 
 let timer = null;
 
-export const useDebounce = (initalState = "", delay = 400) => {
+export const useDebounce = (initalState = "", delay = 100) => {
   const [value, setValue] = useState(initalState);
 
   const handleInputChange = useCallback(

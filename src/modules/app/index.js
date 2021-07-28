@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { useDebounce, useWordCounterColor } from "./hooks";
 import { CHARACTERS_LIMITATION } from "./contants";
@@ -21,13 +21,15 @@ import {
 } from "./styles";
 
 const App = () => {
-  const [message, handleInputDebounceChange] = useDebounce("");
+  // const [message, handleInputDebounceChange] = useDebounce("");
+  const [message, setMessage] = useState("");
   const wordCounterColor = useWordCounterColor(message);
 
   const handleChange = (event) => {
     event.preventDefault();
     const { value } = event.target;
-    handleInputDebounceChange(value);
+    // handleInputDebounceChange(value);
+    setMessage(value);
   };
 
   return (

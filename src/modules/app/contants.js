@@ -6,7 +6,7 @@ export const STRING_40_TO_50_CHAR =
 export const LENGTH_OF_STRING_40_TO_50_CHAR = STRING_40_TO_50_CHAR.length;
 export const STRING_BEYONG_50_CHAR =
   "This is a text which is more than 50 characters in here.";
-export const LENGTH_OF_STRING_BEYONG_50_CHAR = STRING_40_TO_50_CHAR.length;
+export const LENGTH_OF_STRING_BEYONG_50_CHAR = STRING_BEYONG_50_CHAR.length;
 export const WORD_COUNTER_COLOR = {
   BLUE: "rgba(29,161,242,1)",
   YELLOW: "#ffc107",

@@ -176,7 +176,7 @@ exports[`snapshot testing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 3px;
+  padding: 3px 5px;
   height: 1em;
 }
 
@@ -317,10 +317,11 @@ exports[`snapshot testing 1`] = `
       >
         <span
           class="c12"
+          color="rgba(29,161,242,1)"
           data-testid="charCounter"
           title="remaining characters"
         >
-          -11
+          50
         </span>
          
         <div
