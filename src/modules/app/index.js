@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { useDebounce, useWordCounterColor } from "./hooks";
+import { useWordCounterColor } from "./hooks";
 import { CHARACTERS_LIMITATION } from "./contants";
 import {
   StyledXIcon,
